@@ -1,0 +1,580 @@
+<!DOCTYPE html><html>
+
+<head>
+<meta charset="utf-8">
+<title>index</title>
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+</head>
+<body>
+<h1 id="toc_0">Grid Studies: Pure Data</h1>
+
+<p>Pure Data is... (INSERT HERE)</p>
+
+<h2 id="toc_1">Prerequisites</h2>
+
+<p>If you&#39;re very new to Java, here are some tutorials (...)</p>
+
+<p>Download Pd Extended: <a href="http://puredata.info/downloads/pd-extended">puredata.info/</a></p>
+
+<p>Download the monome installer: <a href="http://monome.org/docs/begin">monome.org/docs/begin</a></p>
+
+<p>Download the grid-studies-pd repository: <a href="https://github.com/monome/grid-studies-pd/archive/master.zip">github.com/monome/grid-studies-pd</a></p>
+
+<p>Inside the repository folder you&#39;ll find a <code>/files</code> directory which includes the example patches, plus an abstraction called <code>serialosc.pd</code>.</p>
+
+<h2 id="toc_2">1. Connect</h2>
+
+<p><em>See grid-studies-1-1.pd for this section.</em></p>
+
+<p>To communicate with grids we trade OSC messages with serialosc. serialosc translates OSC messages to streams of numbers over USB.</p>
+
+<p>First we will show how to talk to serialosc.</p>
+
+<p>Open Pd and start a new patch.</p>
+
+<p>Save the blank patch to the <code>/files</code> folder as <code>study.pd</code>.</p>
+
+<p>Create a new object (win/linux: control+1, mac: command+1) and type <code>serialosc</code> then place it in your patch with a mouse click.</p>
+
+<p><img src="images/grid-studies-1-1-1.png" alt=""></p>
+
+<p>Attach your grid and you can now communicate with it through this object.</p>
+
+<p>Note: this object you&#39;ve imbedded isn&#39;t serialosc itself, which is an invisible daemon on your computer. The object is a helper patcher, or &#39;abstraction&#39; to simplify using serialosc. We&#39;ll refer to this helper as serialosc, hopefully without much confusion.</p>
+
+<p>The serialosc abstraction is actually the patch <code>serialosc.pd</code> inside an object. In order for your patch to use serialosc, the abstraction needs to be in the same folder as your saved patch, hence why we saved our patch to <code>/files</code> above.</p>
+
+<h2 id="toc_3">2. Basics</h2>
+
+<p>Messages are sent to serialosc through the top left inlet, and received out the bottom left outlet.</p>
+
+<p><em>See grid-studies-2-1.pd for this section.</em></p>
+
+<h3 id="toc_4">2.1 Key input</h3>
+
+<p>To see what is coming from the grid, create a <code>print</code> object and connect the left outlet of serialosc to it. Open the Pd window (Window -&gt; Pd Window) and press some keys on the grid. OSC data will be displayed in the console.</p>
+
+<p>Examining the output, key data fits this form:</p>
+
+<pre><code>/monome/grid/key x y state</code></pre>
+
+<p>Where x,y is the position and z indicates key down (1) or key up (0).</p>
+
+<p>Other messages (such as connect and disconnect) come from this same outlet, so we want to filter for the key messages.</p>
+
+<p>Change the <code>print</code> object to <code>routeOSC /monome/grid/key</code> and then print the output from the routeOSC.</p>
+
+<p>We now have a list of 3 numbers according to each key action. Use an unpack to break this down further into individual numbers.</p>
+
+<p><img src="images/grid-studies-2-1-1.png" alt=""></p>
+
+<h3 id="toc_5">2.2 LED output</h3>
+
+<p>Above the serialosc box create a message (control/command + 2) and type:</p>
+
+<pre><code>/monome/grid/led/set 2 0 1</code></pre>
+
+<p>Connect this to the left inlet of serialosc.</p>
+
+<p>Clicking this box will light up LED 2 in row 0. The message format is:</p>
+
+<pre><code>/monome/grid/led/set x y z</code></pre>
+
+<p>This is similar to the key input message, where z is on (1) or off (0).</p>
+
+<p>Using Pd&#39;s list methods, use <code>$1 $2 $3</code> to change LEDs more dynamically. With a single message box as a sort of funnel, we can change various positions with message boxes and toggles.</p>
+
+<p>To clear the entire grid, use the following message:</p>
+
+<pre><code>/monome/grid/led/all 0</code></pre>
+
+<p><img src="images/grid-studies-2-2-1.png" alt=""></p>
+
+<h3 id="toc_6">2.3 Coupled interaction</h3>
+
+<p>Connect the output of</p>
+
+<pre><code>routeOSC /monome/grid/key</code></pre>
+
+<p>to the <code>/monome/grid/led/set $1 $2 $3</code> message box above serialosc which changes LEDs.</p>
+
+<p>You now have a coupled interface, where the key state is reflected by the the LEDs.</p>
+
+<p><img src="images/grid-studies-2-3-1.png" alt=""></p>
+
+<h3 id="toc_7">2.4 Decoupled interaction</h3>
+
+<p>The most fundamental decoupled interface is an array of toggles. We can accomplish this by ignoring the key up state, switching the LED state only on key down.</p>
+
+<p>We&#39;ll start with a single toggle for the upper left key position (0, 0).</p>
+
+<p>Remove the connection between routeOSC and the LED-driving message box.</p>
+
+<p>To respond to the 0,0 position, we can use two <code>route</code> objects to filter the x, then y location of the press. Then we can respond only to key down by looking for values of 1 with a <code>sel</code> object.</p>
+
+<pre><code>route 0
+
+route 0
+
+sel 1</code></pre>
+
+<p>Connect the output from the sel into a toggle box (control/command + shift + T). You can now see the toggle reflect the toggle state by pressing the upper-left key on the grid.</p>
+
+<p>To complete the cycle we can then drive the corresponding LED with a message box <code>/monome/grid/led/set 0 0 $1</code> connected to serialosc&#39;s left inlet.</p>
+
+<p><img src="images/grid-studies-2-4-1.png" alt=""></p>
+
+<h2 id="toc_8">3.0 Further</h2>
+
+<p>Now we&#39;ll show how basic grid applications are developed by creating a step sequencer. We will add features incrementally:</p>
+
+<ul>
+<li>Use the top six rows as toggles.</li>
+<li>Accept a clock pulse to advance the playhead from left to right, one column at a time. Wrap back to 0 at the end.</li>
+<li>Display the play head on &quot;position&quot; (bottom) row.</li>
+<li>Indicate the &quot;activity&quot; row (second to last) with a low brightness.</li>
+<li>Trigger an event when the playhead reads an &quot;on&quot; toggle. Our &quot;event&quot; will be to turn on the corresponding LED in the &quot;activity&quot; row.</li>
+<li>Jump to playback position when key pressed in the position row.</li>
+<li>Adjust playback loop with two-key gesture in position row.</li>
+</ul>
+
+<h3 id="toc_9">3.1 Toggles</h3>
+
+<p><em>See grid-studies-3-1.pd for this step.</em></p>
+
+<p>Before we can make our bank of toggles, we need a way to look at the top six rows only, as the last two rows are not part of our toggle bank. First we&#39;ll use a message box to switch around our key input to place the row number first, then route off the last two rows for use later.</p>
+
+<pre><code>$2 $1 $3
+
+route 6 7</code></pre>
+
+<p>By switching the first and second elements and then putting them into the route object, rows 0-5 are passed to the right outlet.</p>
+
+<p>In our previous example we only created a single toggle, and the chosen approach is not appropriate for dealing with a large bank of toggles. Instead we&#39;ll create a <code>table</code> which functions as a large array of data for remembering the toggle states of the top six rows. Our table is inside the subpatcher <code>pd toggles</code>.</p>
+
+<p>Note how after formatting the LED messages from <code>pd toggles</code> we use a <code>s osc-out</code> to send osc messages to serialosc without cluttering our patch with long patch connections.</p>
+
+<p><img src="images/grid-studies-3-1-2.png" alt=""></p>
+
+<p>The toggles sub-patch can be broken down into a number of small steps to understand it, though don&#39;t fret if it doesn&#39;t make total sense immediately. This sub-patch can simply be copied to your own projects without modification and it will work for the full 16x8 grid.</p>
+
+<p><img src="images/grid-studies-3-1-1.png" alt=""></p>
+
+<p>In order to save the state of the bank of toggles we create a table called &#39;grid&#39; with 128 values.</p>
+
+<pre><code>table grid 128</code></pre>
+
+<p>Rearranging the input key press information we can ignore key-ups as before. Inline comments track the current order of our input message.</p>
+
+<pre><code>$3 $2 $1
+
+route 1</code></pre>
+
+<p>In order to put our 2-dimensional grid into a table, we have to &#39;flatten&#39; it into a long list. We do so by multiplying the y value by 16, and adding the result to our x value. The grid is thus read like a book, from left to right, starting at the top and working downward.</p>
+
+<pre><code>unpack
+|   |
+|   * 16
+| /
++</code></pre>
+
+<p>This index value is then used to set two values before toggling that state. The index is converted back to the x,y coordinate for LED feedback, plus we save the index to update the table with our new toggle state.</p>
+
+<p>Finally we use the index to find the current state of the table, then invert that state with &#39;== 0&#39;. This works because our state is always a 0 or 1. This value is then sent to update the grid LED and is stored back in the table.</p>
+
+<h3 id="toc_10">3.2 Play</h3>
+
+<p><em>See grid-studies-3-2.pd for this step.</em></p>
+
+<p>We can create a &quot;play head&quot; with a simple counter.</p>
+
+<p><img src="images/grid-studies-3-2-1.png" alt=""></p>
+
+<p>To see the play position on the bottom row, we will turn on the corresponding LED position after first clearing the entire row. We can clear a row by using a new OSC message:</p>
+
+<pre><code>/monome/grid/led/row 0 7 0 0</code></pre>
+
+<p>where the format of the message is:</p>
+
+<pre><code>/monome/grid/led/row x_offset y d[...]</code></pre>
+
+<p>Here y is 7, the last row. Check out the full OSC spec for more information on this message.</p>
+
+<p>After we clear the row, we turn on the corresponding LED with a normal single-LED message:</p>
+
+<pre><code>/monome/grid/led/set $1 0 1</code></pre>
+
+<p>Now when you turn on the clock, you&#39;ll see the playhead moving along the bottom row.</p>
+
+<h3 id="toc_11">3.3 Triggers</h3>
+
+<p><em>See grid-studies-3-3.pd for this step.</em></p>
+
+<p>As the playhead moves we will read the contents of the corresponding column and trigger events based on which toggles are turned on.</p>
+
+<p>We do this by scanning through our table, looking at every 16th value, driven by the play position. The <code>pd triggers</code> sub patch shows how to read data out of the table we created in <code>pd toggles</code>.</p>
+
+<p><img src="images/grid-studies-3-3-1.png" alt=""></p>
+
+<p>Using the uzi object we read the state of the toggle for each subsequent row, by multiplying the uzi output by 16 (to jump through the array by rows), and adding the current play position to point at the correct column of data. Note that we subtract one from uzi&#39;s right outlet as the grid is indexed from zero, whereas uzi starts counting from one. If the discovered value is 1 we send out the row value to indicate an &quot;event&quot; has occured.</p>
+
+<p>To indicate these &quot;events&quot; we will light up the corresponding x position in the 6th row:</p>
+
+<pre><code>/monome/grid/led/set $1 6 $2</code></pre>
+
+<p>Similarly to the play position display, we need to clear the row between refreshes.</p>
+
+<p>Furthermore, to give the interface some delineation (not just a field of random LEDs) we will &quot;clear&quot; this row to a low-brightness level rather than completely off:</p>
+
+<pre><code>/monome/grid/led/level/row 0 6 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5</code></pre>
+
+<p><img src="images/grid-studies-3-3-2.png" alt=""></p>
+
+<p>This /level/ message is in the format:</p>
+
+<pre><code>/monome/grid/led/level/row x_off y d[...]</code></pre>
+
+<p>The format is similar to the monochromatic <code>row</code> message, but here <code>d[...]</code> is discrete LED values of 0-15. The message we&#39;re using has 16 of the number 5, which sets the entire 6th row to a dim level.</p>
+
+<p>The &quot;triggered&quot; LEDs will be full brightness on top of this dim row.</p>
+
+<p>Lastly, there&#39;s a tiny sound engine so you can actually hear something. Turn on the DAC and turn up the gain slider.</p>
+
+<h3 id="toc_12">3.4 Cutting and Looping</h3>
+
+<p><em>See grid-studies-3-4.pd for this step.</em></p>
+
+<p>To liven up the sequencer, we will have key presses on the play row jump to the pressed position. But we also want a two-key gesture (holding down a first while pressing a second) to set the start-end loop boundaries. This requires keeping track of how many keys are being held down in the last row.</p>
+
+<p>Inside <code>pd cutting</code> we process all presses from the last row, and send our commands to the counter object.</p>
+
+<p><img src="images/grid-studies-3-4-2.png" alt=""></p>
+
+<p>We unpack the incoming message and keep track of the accumulation of key ups and downs. This is accomplished by adding one for each key up and subtracting one for each key down. This looks weird as a pd patch, but tracing through it will reveal the logic.</p>
+
+<p>The number of keys held will gate the output of the x position of the key. When a single key is pressed the x position goes out the left outlet of the gate, setting the position of the counter. This first position is also stored for potential use later.</p>
+
+<p>If a second key is pressed (in this same row) while a first is held, the current x position pressed is set as the loop max (with a <code>max $1</code> message) and the previously pressed x position is recalled and set as the loop minimum (with a <code>min $1</code> message).</p>
+
+<p><img src="images/grid-studies-3-4-1.png" alt=""></p>
+
+<h2 id="toc_13">Closing</h2>
+
+<p>We&#39;ve created a minimal yet intuitive interface for rapidly exploring sequences. We can intuitively change event triggers, loop points, and jump around the data performatively. Many more features could be added, and there are numerous other ways to think about interaction between key press and light feedback in completely different contexts.</p>
+
+<h3 id="toc_14">Suggested exercises</h3>
+
+<ul>
+<li>Display the loop range with dim LED levels.</li>
+<li>&quot;Record&quot; keypresses in the &quot;trigger&quot; row to the toggle matrix.</li>
+<li>Display the play head position as a dim column behind the toggle data.</li>
+<li>Use the rightmost key in the &quot;trigger&quot; row as an &quot;alt&quot; key.
+
+<ul>
+<li>If &quot;alt&quot; is held while pressing a toggle, clear the entire row.</li>
+<li>If &quot;alt&quot; is held while pressing the play row, reverse the direction of play.</li>
+</ul></li>
+</ul>
+
+
+</body>
+
+</html>
