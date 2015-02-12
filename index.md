@@ -1,12 +1,12 @@
 # Grid Studies: Pure Data
 
-Pure Data is... (INSERT HERE)
+Pure Data (Pd) is a visual programming language developed by Miller Puckette in the 1990s for creating interactive computer music and multimedia works. While Puckette is the main author of the program, Pd is an open source project with a large developer base working on new extensions. (from [Wikipedia](http://en.wikipedia.org/wiki/Pure_Data)).
 
 
 
 ## Prerequisites
 
-If you're very new to Java, here are some tutorials (...)
+If you're new to pd, here are some tutorials (...)
 
 Download Pd Extended: [puredata.info/](http://puredata.info/downloads/pd-extended)
 
@@ -279,3 +279,10 @@ We've created a minimal yet intuitive interface for rapidly exploring sequences.
 - Use the rightmost key in the "trigger" row as an "alt" key.
 	- If "alt" is held while pressing a toggle, clear the entire row.
 	- If "alt" is held while pressing the play row, reverse the direction of play.
+
+
+*Max* was designed by Miller Puckette and is actively developed as an open source project. [puredata.info](http://puredata.info).
+
+This tutorial was created by [Trent Gill](http://whimsicalraps.com) for [monome.org](monome.org).
+
+Contributions welcome. Submit a pull request to [github.com/monome/grid-studies-pd](https://github.com/monome/grid-studies-pd) or e-mail [info@monome.org](mailto:info@monome.org).
