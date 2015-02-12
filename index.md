@@ -12,9 +12,7 @@ Download Pd Extended: [puredata.info/](http://puredata.info/downloads/pd-extende
 
 Download the monome installer: [monome.org/docs/begin](http://monome.org/docs/begin)
 
-Download the grid-studies-pd repository: [github.com/monome/grid-studies-pd](https://github.com/monome/grid-studies-pd/archive/master.zip)
-
-Inside the repository folder you'll find a `/files` directory which includes the example patches, plus an abstraction called `serialosc.pd`.
+Download the code examples here: [github.com/monome/grid-studies-pd/releases/latest](https://github.com/monome/grid-studies-pd/releases/latest)
 
 
 ## 1. Connect
