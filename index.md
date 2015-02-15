@@ -8,7 +8,7 @@ Pure Data (Pd) is a visual programming language developed by Miller Puckette in 
 
 ## Prerequisites
 
-If you're new to pd, here are some tutorials (...)
+If you're new to Pd, spend a few moments with these introductory tutorials from Johannes Kriedler: [Programming Electronic Music in Pd](http://pd-tutorial.com/english/index.html)
 
 Download Pd Extended: [puredata.info/](http://puredata.info/downloads/pd-extended)
 
@@ -35,9 +35,9 @@ Create a new object (win/linux: control+1, mac: command+1) and type `serialosc` 
 
 Attach your grid and you can now communicate with it through this object.
 
-Note: this object you've imbedded isn't serialosc itself, which is an invisible daemon on your computer. The object is a helper patcher, or 'abstraction' to simplify using serialosc. We'll refer to this helper as serialosc, hopefully without much confusion.
+Note: this object you've embedded isn't serialosc itself, which is an invisible daemon on your computer. The object is a helper patcher, or 'abstraction' to simplify using serialosc. We'll refer to this helper as serialosc, hopefully without much confusion.
 
-The serialosc abstraction is actually the patch `serialosc.pd` inside an object. In order for your patch to use serialosc, the abstraction needs to be in the same folder as your saved patch, hence why we saved our patch to `/files` above.
+The serialosc abstraction is actually the patch `serialosc.pd` inside an object. In order for your patch to use serialosc, the abstraction needs to be in the same folder as your saved patch, which explains why we saved our patch to `/files` above.
 
 
 
@@ -56,11 +56,11 @@ Examining the output, key data fits this form:
 
 	/monome/grid/key x y state
 
-Where x,y is the position and z indicates key down (1) or key up (0).
+Where *x*,*y* is the position and *state* indicates key down (1) or key up (0).
 
 Other messages (such as connect and disconnect) come from this same outlet, so we want to filter for the key messages.
 
-Change the `print` object to `routeOSC /monome/grid/key` and then print the output from the routeOSC.
+Change the `print` object to `routeOSC /monome/grid/key` and then print the output from routeOSC.
 
 We now have a list of 3 numbers according to each key action. Use an unpack to break this down further into individual numbers.
 
@@ -68,7 +68,7 @@ We now have a list of 3 numbers according to each key action. Use an unpack to b
 
 ### 2.2 LED output
 
-Above the serialosc box create a message (control/command + 2) and type:
+Above the serialosc box create a message box (control/command + 2) and type:
 
 	/monome/grid/led/set 2 0 1
 
@@ -76,9 +76,9 @@ Connect this to the left inlet of serialosc.
 
 Clicking this box will light up LED 2 in row 0. The message format is:
 
-	/monome/grid/led/set x y z
+	/monome/grid/led/set x y state
 
-This is similar to the key input message, where z is on (1) or off (0).
+This is similar to the key input message, where *state* is on (1) or off (0).
 
 Using Pd's list methods, use `$1 $2 $3` to change LEDs more dynamically. With a single message box as a sort of funnel, we can change various positions with message boxes and toggles.
 
@@ -127,7 +127,7 @@ To complete the cycle we can then drive the corresponding LED with a message box
 
 ## 3.0 Further
 
-Now we'll show how basic grid applications are developed by creating a step sequencer. We will add features incrementally:
+Now we'll show how basic grid applications are developed by creating a step sequencer, adding features incrementally:
 
 - Use the top six rows as toggles.
 - Accept a clock pulse to advance the playhead from left to right, one column at a time. Wrap back to 0 at the end.
@@ -152,11 +152,11 @@ By switching the first and second elements and then putting them into the route 
 
 In our previous example we only created a single toggle, and the chosen approach is not appropriate for dealing with a large bank of toggles. Instead we'll create a `table` which functions as a large array of data for remembering the toggle states of the top six rows. Our table is inside the subpatcher `pd toggles`.
 
-Note how after formatting the LED messages from `pd toggles` we use a `s osc-out` to send osc messages to serialosc without cluttering our patch with long patch connections.
+Note how after formatting the LED messages from `pd toggles` we use a `s osc-out` to send osc messages to serialosc without cluttering our patch with long connections.
 
 ![](images/grid-studies-3-1-2.png)
 
-The toggles sub-patch can be broken down into a number of small steps to understand it, though don't fret if it doesn't make total sense immediately. This sub-patch can simply be copied to your own projects without modification and it will work for the full 16x8 grid.
+The toggles sub-patch can be broken down into a number of small steps to understand it, though don't fret if it doesn't make sense immediately. This sub-patch can simply be copied to your own projects without modification and it will work for up to the full 16x8 grid.
 
 ![](images/grid-studies-3-1-1.png)
 
@@ -220,7 +220,7 @@ We do this by scanning through our table, looking at every 16th value, driven by
 
 Using the uzi object we read the state of the toggle for each subsequent row, by multiplying the uzi output by 16 (to jump through the array by rows), and adding the current play position to point at the correct column of data. Note that we subtract one from uzi's right outlet as the grid is indexed from zero, whereas uzi starts counting from one. If the discovered value is 1 we send out the row value to indicate an "event" has occured.
 
-To indicate these "events" we will light up the corresponding x position in the 6th row:
+To indicate these "events" we will light up the corresponding x position in the second to last row:
 
 	/monome/grid/led/set $1 6 $2
 
@@ -241,7 +241,7 @@ The format is similar to the monochromatic `row` message, but here `d[...]` is d
 
 The "triggered" LEDs will be full brightness on top of this dim row.
 
-Lastly, there's a tiny sound engine so you can actually hear something. Turn on the DAC and turn up the gain slider.
+There's a tiny sound engine so you can actually hear something. Turn on the DAC and turn up the gain slider.
 
 
 ### 3.4 Cutting and Looping
@@ -254,7 +254,7 @@ Inside `pd cutting` we process all presses from the last row, and send our comma
 
 ![](images/grid-studies-3-4-2.png)
 
-We unpack the incoming message and keep track of the accumulation of key ups and downs. This is accomplished by adding one for each key up and subtracting one for each key down. This looks weird as a pd patch, but tracing through it will reveal the logic.
+Unpack the incoming message and keep track of the accumulation of key ups and downs. This is accomplished by adding one for each key up and subtracting one for each key down. This looks weird as a pd patch, but tracing through it will reveal the logic.
 
 The number of keys held will gate the output of the x position of the key. When a single key is pressed the x position goes out the left outlet of the gate, setting the position of the counter. This first position is also stored for potential use later.
 
