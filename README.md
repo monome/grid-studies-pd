@@ -3,8 +3,8 @@
 Pure Data (Pd) is a visual programming language developed by Miller Puckette in the 1990s for creating interactive computer music and multimedia works. While Puckette is the main author of the program, Pd is an open source project with a large developer base working on new extensions. (source: [Wikipedia](http://en.wikipedia.org/wiki/Pure_Data))
 
 - Download Pd: [puredata.info/](https://puredata.info/downloads/pure-data)
-- Install serialosc: [/docs/serialosc/setup](/docs/serialosc/setup)
-- Download the `[monome-device]` object + code examples here: [files/grid-studies-pd.zip](https://monome.org//docs/grid/studies/pd/files/grid-studies-pd.zip)
+- Install serialosc: [https://monome.org/docs/serialosc/setup](/docs/serialosc/setup)
+- Download the `[monome-device]` object + code examples here: [files/grid-studies-pd.zip](https://monome.org/docs/grid/studies/pd/files/grid-studies-pd.zip)
 
 ### Required externals
 
